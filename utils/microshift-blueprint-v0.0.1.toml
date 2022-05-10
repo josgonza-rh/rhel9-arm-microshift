@@ -1,0 +1,84 @@
+name = "microshift-build"
+
+description = "Build an OSTree Microshift Image"
+version = "0.0.1"
+modules = []
+groups = []
+
+
+# MicroShift and dependencies
+
+[[packages]]
+name = "microshift"
+version = "*"
+
+[[packages]]
+name = "conntrack-tools"
+version = "*"
+
+[[packages]]
+name = "openshift-clients"
+version = "*"
+
+[[packages]]
+name = "podman"
+version = "*"
+
+
+# configuration management
+
+[[packages]]
+name = "transmission-agent"
+version = "0.1.6"
+
+[[packages]]
+name = "git"
+version = "*"
+
+
+# troubleshooting tools
+
+[[packages]]
+name = "iputils"
+version = "*"
+
+[[packages]]
+name = "bind-utils"
+version = "*"
+
+[[packages]]
+name = "net-tools"
+version = "*"
+
+[[packages]]
+name = "iotop"
+version = "*"
+
+[[packages]]
+name = "curl"
+version = "*"
+
+[[packages]]
+name = "wget"
+version = "*"
+
+# other
+
+[[packages]]
+name = "redhat-release"
+version = "*"
+
+
+# customizations
+
+[customizations]
+
+[[customizations.user]]
+name = "redhat"
+description = "Default User"
+# Password: redhat
+password = "$6$yW34vZfc4uBobPza$bYVk5cZ5JM7CLBI1qOzdrexKRFn/zPgcnlbBqIgnb1sDFVOGzI/R9Tm/TqyJw5DnKSewK8D49185l3rJkBiHS1"
+groups = ["wheel"]
+
+[customizations.services]
+enabled = ["crio", "transmission.timer", "microshift", "podman"]
