@@ -140,8 +140,8 @@ Once we have our image created, we can download it by using `composer-cli` or th
 
 Here you have multiple choices:
 - [etcher](https://www.balena.io/etcher/)
-- [Raspberry Pi](https://www.raspberrypi.com/documentation/computers/getting-started.html#using-raspberry-pi-imager)
-- [Linux](https://www.raspberrypi.com/documentation/computers/getting-started.html#installing-images-on-linux)
+- [Raspberry Pi Imager](https://www.raspberrypi.com/documentation/computers/getting-started.html#using-raspberry-pi-imager)
+- [On Linux](https://www.raspberrypi.com/documentation/computers/getting-started.html#installing-images-on-linux)
 
 ## Recommended links
 
